@@ -1,0 +1,19 @@
+[project]
+name = "stepik-archive"
+version = "0.1.0"
+description = "Export Stepik course theory to local Markdown and search the archive"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "markdownify>=1.2.3",
+    "python-dotenv>=1.2.2",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+stepik-archive = "stepik_archive.cli:main"
+stepik_archive = "stepik_archive.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.8,<0.12.0"]
+build-backend = "uv_build"
